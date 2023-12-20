@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-18t@iwak*#3d4el)&%k=96%1p9=_u1(d5s1k1c-*5*pcj@m=ek
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -131,8 +131,12 @@ WSGI_APPLICATION = 'mechanical.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'medassist',
+    'USER' : 'postgres',
+    'PASSWORD' : 'postgres',
+    'HOST' : '0.0.0.0',
+    'PORT' : '5432',
     }
 }
 

@@ -10,6 +10,6 @@ RUN pip install -r requirement.txt
 
 COPY . .
 
-EXPOSE 8000
+EXPOSE 8001
 
 CMD ["python", "manage.py", "runserver"]
